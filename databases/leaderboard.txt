@@ -1,0 +1,17 @@
+name;word;letters;game_length;game_time
+Jänes;bussijuht;L, K, P;30;2025-02-06 14:31:24
+Karu;suvila;;16;2025-02-06 14:32:06
+Oinas;kasvuhoone;Y, R, D, C, J, M, M, C, R, J, G;21;2025-02-06 14:36:58
+Rebane;suvila;;12;2025-02-06 14:43:48
+Teadmata;suvila;;12;2025-02-06 14:43:56
+Tundmatu;suvila;;12;2025-02-06 14:43:59
+Unknown;suvila;;12;2025-02-06 14:44:00
+Unknown;suvila;;12;2025-02-06 14:44:01
+Koer;suvila;B;12;2025-02-06 15:10:06
+Unknown;suvila;B;12;2025-02-06 15:10:11
+Teadmata;suvila;B;12;2025-02-06 15:10:12
+Teadmata;suvila;B;12;2025-02-06 15:10:13
+Kass;suvila;5, P, Ö, E, E, E, Q, W, R, C, G;32;2025-02-06 15:36:20
+ilves;kasvuhoone;Ä;43;2025-02-06 15:52:27
+Hunt;suvila;;14;2025-02-06 16:03:49
+Oppossum;suvila;E;15;2025-02-06 17:32:05
