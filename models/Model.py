@@ -5,17 +5,22 @@ import os
 import random
 from datetime import datetime
 
-from models.FileObject import FileObject
-from models.Leaderboard import Leaderboard
+#from models.FileObject import FileObject #vaja kui kasutada tekstipõhist andmebaasi
+from models.Database import Database
+#from models.Leaderboard import Leaderboard
 
 
 class Model:
     def __init__(self):
         self.__image_files = [] # tühi list piltide jaoks
         self.load_images('images')
-        self.__file_object = FileObject('databases', 'words.txt')
-        self.__categories = self.__file_object.get_unique_categories()
-        self.__scoreboard = Leaderboard()
+        #self.__file_object = FileObject('databases', 'words.txt') #vaja kui kasutada tekstipõhist andmebaasi
+
+
+        self.db = Database()
+        #self.__categories = self.__file_object.get_unique_categories() #võtab kategooriad tekstifailist
+        self.__categories = self.db.get_unique_categories() #võtab kategooriad andmebaasist
+        #self.__scoreboard = Leaderboard()
         self.titles = ['Poomismäng 2025', 'Kas jäid magama?', 'Ma ootan su käiku!', 'Sisesta juba see täht!', 'Zzzzz....']
 
         #Mängu muutujad
@@ -43,7 +48,8 @@ class Model:
             category = None
 
 
-        self.__new_word = self.__file_object.get_random_word(category)
+        #self.__new_word = self.__file_object.get_random_word(category) #võtab sõnad teksti failist
+        self.__new_word = self.db.get_random_word(category)  # Võta juhuslik sõna ja kategooria
         self.__user_word = [] #algseis
         self.__counter = 0 #algseis
         self.__all_user_chars = [] #algseis
@@ -90,9 +96,16 @@ class Model:
         if not name.strip(): #Nime ei ole
             name = random.choice(['Tundmatu', 'Teadmata', 'Unknown'])
 
-        with open(self.__scoreboard.file_path, 'a', encoding='utf-8') as f:
-            line = ';'.join([name.strip(), self.__new_word, self.get_all_user_chars(), str(seconds), today])
-            f.write(line+ '\n')
+        #with open(self.__scoreboard.file_path, 'a', encoding='utf-8') as f:
+           # line = ';'.join([name.strip(), self.__new_word, self.get_all_user_chars(), str(seconds), today])
+            #f.write(line+ '\n')
+        self.db.cursor.execute("""
+                INSERT INTO leaderboard (name, word, letters, game_length, game_time)
+                VALUES (?, ?, ?, ?, ?)
+            """, (name.strip(), self.__new_word, self.get_all_user_chars(), seconds, today))
+
+        self.db.conn.commit()
+        print("Tulemused salvestatud!")
 
     # GETTERS
 

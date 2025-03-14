@@ -3,6 +3,7 @@ from sys import exit
 from tkinter import Tk, messagebox
 
 from controllers.Controller import Controller
+from models.Database import Database
 from models.Model import Model
 from views.View import View
 
@@ -10,6 +11,7 @@ from views.View import View
 
 if __name__ == '__main__':
     try:
+        #db=Database() #võibolla pole vaja
         model = Model() #Loo mudel
         view = View(model) #Loo view andes kaasa model
         Controller(model, view)  #Loo Controller

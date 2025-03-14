@@ -2,7 +2,7 @@ import random
 from tkinter import simpledialog, messagebox
 from tkinter.constants import DISABLED, NORMAL
 
-from models.Leaderboard import Leaderboard
+#from models.Leaderboard import Leaderboard
 from models.Stopwatch import Stopwatch
 from models.Timer import Timer
 
@@ -91,12 +91,17 @@ class Controller:
 
         self.is_game_over()
 
-    def btn_scoreboard_click(self,):
-        lb = Leaderboard()
-        data = lb.read_leaderboard()
-        popup_window = self.view.create_popup_window()
-        self.view.generate_scoreboard(popup_window, data)
+    def btn_scoreboard_click(self):
+        data = self.model.db.get_leaderboard()  # Kasuta nüüd Score objekte
 
+        print("Andmebaasist saadud edetabel:", data)  # Kontrollin, et andmed tulevad õigesti
+
+        if not data:
+            messagebox.showinfo("Edetabel", "Hetkel pole edetabelis ühtegi tulemust!")
+            return
+
+        popup_window = self.view.create_popup_window()
+        self.view.generate_scoreboard(popup_window, data)  # Score objektid lähevad View-le
 
     def is_game_over(self):
         if self.model.counter >= 11 or'_' not in self.model.user_word:

@@ -1,11 +1,14 @@
 import os.path
+import sqlite3
 
 from models.Score import Score
-
+"""
 
 class Leaderboard:
+    
     def __init__(self):
         self.__file_path = os.path.join('databases', 'leaderboard.txt')
+
         self.check_file()
 
     def check_file(self):
@@ -38,3 +41,6 @@ class Leaderboard:
     @property
     def file_path(self):
         return self.__file_path # failinimi koos kaustaga satabases/leaderboard.txt
+        """
+
+

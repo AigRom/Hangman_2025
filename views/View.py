@@ -1,4 +1,4 @@
-import os
+
 from datetime import datetime
 import time
 from tkinter import *
@@ -119,11 +119,21 @@ class View(Tk):
 
         return combo
 
+    @staticmethod
+    def validate_input(new_text):
+        """Lubab ainult tähti (A-Z, a-z)."""
+        return new_text.isalpha() and len(new_text) <= 1
+
     def create_entry(self):
         char = Entry(self.__frame_top, justify=CENTER)
         char['state'] = 'disabled'
         char.focus()
         char.grid(row=2, column=1, padx=5, pady=2, sticky=EW)
+        vcmd = (self.register(self.validate_input), "%P")
+        char.config(validate="key", validatecommand=vcmd)
+
+
+
 
         return char
 
