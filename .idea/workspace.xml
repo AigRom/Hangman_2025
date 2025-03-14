@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4f52c2f-ba02-451d-97a4-41b2f8e670fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hangman_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hangman_2025.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Leaderboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Leaderboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/View.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/View.py" afterDir="false" />
-    </list>
+    <list default="true" id="b4f52c2f-ba02-451d-97a4-41b2f8e670fa" name="Changes" comment="Lisatud klass Database ja SQLite andmebaas. Nüüd on mäng andmebaasi põhine.&#10; Täiustasin sisestuskasti nii, et lubaks kirjutada ainult tähti(Wiew.py alla lisasin meetodi validate_input ja mõne rea meetodisse create_entery." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,12 +131,24 @@
       <workItem from="1741630593963" duration="6803000" />
       <workItem from="1741637453811" duration="15000" />
       <workItem from="1741637474999" duration="308000" />
-      <workItem from="1741885237673" duration="24436000" />
+      <workItem from="1741885237673" duration="24826000" />
     </task>
+    <task id="LOCAL−00001" summary="Lisatud klass Database ja SQLite andmebaas. Nüüd on mäng andmebaasi põhine.&#10; Täiustasin sisestuskasti nii, et lubaks kirjutada ainult tähti(Wiew.py alla lisasin meetodi validate_input ja mõne rea meetodisse create_entery.">
+      <option name="closed" value="true" />
+      <created>1741966381661</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1741966381661</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lisatud klass Database ja SQLite andmebaas. Nüüd on mäng andmebaasi põhine.&#10; Täiustasin sisestuskasti nii, et lubaks kirjutada ainult tähti(Wiew.py alla lisasin meetodi validate_input ja mõne rea meetodisse create_entery." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lisatud klass Database ja SQLite andmebaas. Nüüd on mäng andmebaasi põhine.&#10; Täiustasin sisestuskasti nii, et lubaks kirjutada ainult tähti(Wiew.py alla lisasin meetodi validate_input ja mõne rea meetodisse create_entery." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hangman_2025$app.coverage" NAME="app Coverage Results" MODIFIED="1741966031361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
